@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-palm: #15302a;
+  --color-palm-2: #1f443a;
+  --color-palm-3: #2f5d50;
+  --color-paper: #faf6ee;
+  --color-lime: #efe5d2;
+  --color-sand: #d8c29c;
+  --color-clay: #a4482a;
+  --color-clay-2: #c7643e;
+  --color-pool: #2b8db0;
+  --color-ink: #1d1b17;
+  --color-mute: #6d6558;
+  --font-display: "El Messiri", "IBM Plex Sans Arabic", serif;
+  --font-sans: "IBM Plex Sans Arabic", system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+.num { font-variant-numeric: tabular-nums; direction: ltr; unicode-bidi: isolate; display: inline-block; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; }
+p { text-wrap: pretty; }
+:focus-visible { outline: 3px solid var(--color-pool); outline-offset: 2px; }
+
+/* arch frame — echoes the arched windows of the classic villas */
+.arch { border-radius: 999px 999px 10px 10px; overflow: hidden; }
+.tile-rule { height: 10px; background:
+  radial-gradient(circle at 50% 0, transparent 9px, var(--color-clay) 10px) 0 0 / 22px 10px repeat-x; opacity: .9; }
+
+@keyframes kb { from { transform: scale(1.02) } to { transform: scale(1.1) } }
+.kenburns { animation: kb 18s ease-out both alternate infinite; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .kenburns { animation: none; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
