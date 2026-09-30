@@ -3,7 +3,7 @@
 // ─────────────────────────────────────────────────────────────
 
 export const site = {
-  url: "https://lavista-city.example.com", // ← غيّرها بالدومين الفعلي
+  url: "https://www.la-vistaeg.org/", // ← غيّرها بالدومين الفعلي
   agency: "Grandeur Spaces",
   project: "لافيستا سيتي",
   projectEn: "La Vista City",
