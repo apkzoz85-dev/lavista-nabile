@@ -16,10 +16,10 @@ export const site = {
   phoneIntl: "+201030083122",
   phoneDisplay: "01030083122",
   whatsapp: "201030083122",
-  email: "leads@grandeur-spaces.com",
+  email: "info@la-vistaeg.org",
 
   // ← ضع مفتاح Web3Forms هنا قبل النشر
-  web3forms: "",
+  web3forms: "fb612a8a-0b13-45d4-bb1a-7a8d26c6f969",
 
   // ← Google Ads: ضع الـ tag و labels قبل النشر
   gtag: "",
