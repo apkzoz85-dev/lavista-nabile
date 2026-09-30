@@ -1,17 +1,19 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import StyleSplit from "@/components/StyleSplit";
-import Inventory from "@/components/Inventory";
-import Terms from "@/components/Terms";
-import MasterPlan from "@/components/MasterPlan";
-import Gallery from "@/components/Gallery";
-import Tour from "@/components/Tour";
-import Location from "@/components/Location";
-import Faq from "@/components/Faq";
-import FinalCta from "@/components/FinalCta";
-import Footer from "@/components/Footer";
-import Floating from "@/components/Floating";
-import Overlays from "@/components/Overlays";
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import Products from "@/components/products";
+import Units from "@/components/units";
+import Calculator from "@/components/calculator";
+import Developer from "@/components/developer";
+import { Location, Amenities, Gallery, Faq } from "@/components/sections";
+import { Infrastructure, Investment, Compare as CompareTable } from "@/components/sections-2";
+import LeadForm from "@/components/lead-form";
+import {
+  FloatingCtas,
+  MobileBar,
+  LeadPopup,
+  CookieConsent,
+  Footer,
+} from "@/components/chrome";
 
 export default function Page() {
   return (
@@ -19,19 +21,24 @@ export default function Page() {
       <Header />
       <main>
         <Hero />
-        <Inventory />
-        <Terms />
-        <StyleSplit />
-        <MasterPlan />
-        <Gallery />
-        <Tour />
+        <Products />
+        <Units />
+        <CompareTable />
+        <Calculator />
+        <Amenities />
+        <Infrastructure />
         <Location />
+        <Investment />
+        <Developer />
+        <Gallery />
         <Faq />
-        <FinalCta />
+        <LeadForm />
       </main>
       <Footer />
-      <Floating />
-      <Overlays />
+      <FloatingCtas />
+      <MobileBar />
+      <LeadPopup />
+      <CookieConsent />
     </>
   );
 }

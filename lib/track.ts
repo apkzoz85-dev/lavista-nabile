@@ -1,7 +1,13 @@
-import { SITE } from "./site";
-declare global { interface Window { gtag?: (...a: unknown[]) => void; dataLayer?: unknown[] } }
-export function track(kind: keyof typeof SITE.conversions) {
-  try { window.gtag?.("event", "conversion", { send_to: SITE.conversions[kind] }); } catch {}
+import { site } from "./site";
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
+  }
 }
-export const openPrivacy = () => window.dispatchEvent(new Event("open-privacy"));
-export const openLead = () => window.dispatchEvent(new Event("open-lead"));
+
+export function track(kind: "form" | "whatsapp" | "call") {
+  if (typeof window === "undefined" || !window.gtag) return;
+  window.gtag("event", "conversion", { send_to: site.conv[kind] });
+}
